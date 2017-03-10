@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GRIP.iml" filepath="$PROJECT_DIR$/.idea/GRIP.iml" />
-      <module fileurl="file://$USER_HOME$/pynetworktables/.idea/pynetworktables.iml" filepath="$USER_HOME$/pynetworktables/.idea/pynetworktables.iml" />
+      <module fileurl="file://$USER_HOME$/networktables/GRIP/.idea/GRIP.iml" filepath="$USER_HOME$/networktables/GRIP/.idea/GRIP.iml" />
+      <module fileurl="file://$USER_HOME$/networktables/.idea/networktables.iml" filepath="$USER_HOME$/networktables/.idea/networktables.iml" />
+      <module fileurl="file://$USER_HOME$/networktables/pynetworktables/.idea/pynetworktables.iml" filepath="$USER_HOME$/networktables/pynetworktables/.idea/pynetworktables.iml" />
     </modules>
   </component>
 </project>

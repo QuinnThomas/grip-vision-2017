@@ -1,7 +1,5 @@
 '''imports'''
 import time
-import argparse
-import logging
 from threading import Thread
 
 try:  # things that could error go here

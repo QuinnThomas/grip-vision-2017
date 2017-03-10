@@ -1,49 +1,24 @@
-import cv2
-import numpy
-import math
-from enum import Enum
-from .networktables import NetworkTables as _NT
-from ntcore.constants import (
-    NT_BOOLEAN,
-    NT_DOUBLE,
-    NT_STRING,
-    NT_RAW,
-    NT_BOOLEAN_ARRAY,
-    NT_DOUBLE_ARRAY,
-    NT_STRING_ARRAY,
-
-    NT_PERSISTENT,
-
-    NT_NOTIFY_IMMEDIATE,
-    NT_NOTIFY_LOCAL,
-    NT_NOTIFY_NEW,
-    NT_NOTIFY_DELETE,
-    NT_NOTIFY_UPDATE,
-    NT_NOTIFY_FLAGS
-)
-from ntcore.value import Value
-import logging
-import grip
 from cv2 import *
-from picamera.array import PiRGBArray
 from picamera import PiCamera
-
+from picamera.array import PiRGBArray
+from networktables import *
+import grip
 
 NetworkTables.initialize(server='roborio-167-frc.local')
 table = NetworkTables.getTable('myContoursReport')
 
 # class PiVideoStream:
- #    def __init__(self):
- #        self.camera = PiCamera()
- #        self.camera.resolution = VisionMap.resolution
- #        self.camera.framerate = VisionMap.framerate
- #        self.camera.shutter_speed = VisionMap.exposure
- #        self.camera.brightness = VisionMap.brightness
- #        self.camera.sharpness = VisionMap.sharpness
- #        self.camera.saturation = VisionMap.saturation
- #        self.camera.rotation = VisionMap.rotation
- #        self.rawCapture = PiRGBArray(self.camera, size=VisionMap.resolution)
- #        self.stream = self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True)
+#    def __init__(self):
+#        self.camera = PiCamera()
+#        self.camera.resolution = VisionMap.resolution
+#        self.camera.framerate = VisionMap.framerate
+#        self.camera.shutter_speed = VisionMap.exposure
+#        self.camera.brightness = VisionMap.brightness
+#        self.camera.sharpness = VisionMap.sharpness
+#        self.camera.saturation = VisionMap.saturation
+#        self.camera.rotation = VisionMap.rotation
+#        self.rawCapture = PiRGBArray(self.camera, size=VisionMap.resolution)
+#        self.stream = self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True)
 camera = PiCamera()
 camera.resolution = (410, 308)
 camera.framerate = 24
